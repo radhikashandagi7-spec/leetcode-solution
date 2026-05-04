@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{font-family:Arial;background:#f0f4ff}
+.box{width:250px;margin:80px auto;padding:20px;background:#fff;
+text-align:center;box-shadow:0 0 10px #0003}
+input{width:90%;padding:5px;margin:5px 0}
+button{width:100%;padding:8px;background:blue;color:#fff;border:0;border-radius:5px}
+#msg{margin-top:10px;font-weight:bold}
+</style>
+</head>
+
+<body>
+<div class="box"><h3>Login</h3>
+<input id="u" placeholder="Username">
+<input id="p" type="password" placeholder="Password">
+<button onclick="v()">Login</button><p id="msg"></p>
+</div>
+
+<script>
+v=()=>{m=msg.style;
+msg.innerHTML=(u.value&&p.value)?
+(m.color="green","Login successful!"):
+(m.color="red","Please fill all fields!")}
+</script>
+</body>	
+</html>
