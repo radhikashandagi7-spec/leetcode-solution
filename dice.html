@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#dice {
+  font-size: 80px;
+  text-align: center;
+  margin: 40px;
+}
+
+.roll {
+  animation: spin 0.1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+button {
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="roll()">🎲 Roll</button>
+<div id="dice">⚀</div>
+
+<script>
+let faces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
+
+function roll(){
+  dice.classList.add("roll");
+
+  let count = 0;
+
+  let i = setInterval(()=>{
+    dice.textContent = faces[Math.floor(Math.random()*6)];
+    count++;
+
+    if(count > 10){
+      clearInterval(i);
+      dice.classList.remove("roll");
+    }
+  },100);
+}
+</script>
+
+</body>
+</html>
