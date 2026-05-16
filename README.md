@@ -1,3 +1,3 @@
 # leetcode-solution
 hi this is radhika
-trying my best
+trying to figure out github 
