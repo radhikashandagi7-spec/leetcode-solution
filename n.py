@@ -1,19 +1,7 @@
-def is_safe(board,row,col):
-    for r in range(row):
-        if board[r]==col or abs(board[r]-col)==abs(r-row):
-            return False 
-    return True
-def solve(board,row,n):
-    if row==n:
-        print(board)
-        return True
-    for col in range(n):
-        if is_safe(board,row,col):
-            board[row]=col
-            if solve(board,row+1,n):
-                return True
-        board[row]=-1
-    return False
-n=4
-board=[-1]*n
-solve(board,0,n)
+a=[[1,2],[3,4]]
+b=[[5,5],[7,8]]
+result=[[0,0],[0,0]]
+for i in range(len(a)):
+    for j in range(len(b[0])):
+        for k in range(len(b[0])):
+            result[i][j]+=a[i][j]*b[k][j]
